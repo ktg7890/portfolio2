@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
+
+</head>
+
+<!-- gnb -->
+<div data-include-path="gnb.html"></div>
+<!-- END gnb -->
+
+<!--Wrap-->
+<div id="wrap">
+    <!--Container-->
+    <div id="container" class="pin_code_bg bill_bg flex">
+        <!-- sub header -->
+        <div class="sub_header">
+            <div class="sub_header_inner flex">
+                <div class="back_btn flex_c" onclick="history.back();">
+                    <div class="img_icon"><img src="../image/common/back_arw.svg" alt=""></div>
+                </div>
+                <div class="sub_name">
+                    領収書の詳細
+                </div>
+                <div class="gnb_btn flex_c" onclick="$('.gnb_wrap').addClass('on'); $('html,body').addClass('on');">
+                    <div class="img_icon"><img src="../image/common/menu.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- END sub header -->
+
+        <div class="bill_wrap flex">
+            <div class="bill_box">
+                <div class="bill_tit fz18">ツーサムプレイス</div>
+                <div class="location_alt_box flex">
+                    <div class="img_icon"><img src="..//image/sub/bill_location.svg" alt=""></div>
+                    <div class="alt">5263-78 Naganohara, Agatsuma District, 5Gunma 377-1304 日本</div>
+                </div>
+
+                <div class="profile_alt_box three">
+                    <div class="flex_s">
+                        <div class="left">Date</div>
+                        <div class="right">12/11/2023 19:06:02</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Time</div>
+                        <div class="right">8:00 am</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Subtotal</div>
+                        <div class="right">¥ 13,565</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Tip(10%)</div>
+                        <div class="right">¥ 1,356</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">이용자携帯電話</div>
+                        <div class="right">010-2058-4516</div>
+                    </div>
+                </div>
+
+                <div class="profile_alt_box">
+                    <div class="flex_s">
+                        <div class="left">決済金額</div>
+                        <div class="right two">¥ 54,922</div>
+                    </div>
+                </div>
+                <div class="sign_img_box flex">
+                    <div class="left">高サイン客</div>
+                    <div class="right"><img class="mt10" src="../image/sub/sign_img.png" alt=""></div>
+                </div>
+            </div>
+
+            <div class="chk_box flex_c">
+                <input type="checkbox" id="chk1">
+                <label for="chk1">携帯電話に領収書を送りたいです。</label>
+            </div>
+
+            <button type="button" class="common_ok_btn" onclick="bill_pop_Open();">決済する</button>
+        </div>
+    </div>
+    <!--END Container-->
+
+    <!-- bill_pop -->
+    <div class="bill_pop">
+        <div class="modal_bg"></div>
+        <div class="pop">
+            <div class="pop_body">
+                <div class="pop_img img_icon"><img src="../image/sub/pop_chk_icon.png" alt=""></div>
+                <div class="pop_tit">決済完了</div>
+                <div class="pop_sub_tit">決済が正常に完了しました。</div>
+                <div class="profile_alt_box two">
+                    <div class="flex_s">
+                        <div class="left">決済金額</div>
+                        <div class="right two">¥ 54,922</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_ment"><span class="timer">3</span> 秒後にメインに戻ります。</div>
+        </div>
+    </div>
+    <!-- END bill_pop -->
+
+</div>
+<!--END Wrap-->
+
+</body>
+
+</html>
+
+
+<script>
+    $(document).ready(function () {
+
+    });
+    // bill_pop
+    function bill_pop_Open() {
+        $('.bill_pop .pop').fadeIn();
+        $('.bill_pop .modal_bg').fadeIn();
+        $('html, body').addClass('on');
+        $('.timer').text(3);
+        let time = 3;
+        const interval = setInterval(function () {
+            time--;
+            if (time === 2) $('.timer').text(2);
+            if (time === 1) $('.timer').text(1);
+            if (time === 0) clearInterval(interval);
+        }, 1000);
+        setTimeout(function () {
+            bill_pop_Close();
+        }, 3000);
+    }
+
+    function bill_pop_Close() {
+        $('.bill_pop .pop').fadeOut();
+        $('.bill_pop .modal_bg').fadeOut();
+        $('html, body').removeClass('on');
+    }
+    // END bill_pop
+</script>

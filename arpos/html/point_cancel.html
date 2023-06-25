@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
+
+</head>
+
+<!-- gnb -->
+<div data-include-path="gnb.html"></div>
+<!-- END gnb -->
+
+<!--Wrap-->
+<div id="wrap">
+    <!--Container-->
+    <div id="container" class="pin_code_bg bill_bg flex">
+        <!-- sub header -->
+        <div class="sub_header">
+            <div class="sub_header_inner flex no">
+                <div class="back_btn flex_c" onclick="history.back();">
+                    <div class="img_icon"><img src="../image/common/back_arw.svg" alt=""></div>
+                </div>
+                <div class="sub_name">
+                    内訳.
+                </div>
+                <div class="gnb_btn flex_c" onclick="$('.gnb_wrap').addClass('on'); $('html,body').addClass('on');">
+                    <div class="img_icon"><img src="../image/common/menu.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- END sub header -->
+        <div class="common_list flex">
+            <a href="../html/point_list.html" class="flex_c ">決済内訳</a>
+            <a href="../html/point_cancel.html" class="flex_c active">決済キャンセル</a>
+        </div>
+
+        <div class="point_wrap">
+            <div class="search_box">
+                <div class="icon_box flex">
+                    <div class="left flex">
+                        <button type="button" class="search_btn flex_c" onclick="date_search_modal_Open();">
+                            <div class="img_icon"><img src="../image/sub/search.svg" alt=""></div>
+                        </button>
+                        <button type="button" class="filter_btn flex_c" onclick="card_search_modal_Open();">
+                            <div class="img_icon"><img src="../image/sub/filter.svg" alt=""></div>
+                        </button>
+                    </div>
+                    <button type="button" class="reset_btn flex_c">
+                        <div class="img_icon"><img src="../image/sub/reset.svg" alt=""></div>
+                    </button>
+                </div>
+                <div class="search_result flex_c">
+                    <div class="name">最新順</div>
+                    <div class="result">2023.02.07~2023.02.07</div>
+                </div>
+
+                <div class="list_alt flex_s">
+                    <div class="list_total">総決済 <span>50件</span></div>
+                    <div class="list_won">¥ 3,177,000</div>
+                </div>
+            </div>
+
+            <div class="point_list_wrap">
+                <div class="point_list_box" onclick="location.href='../html/point_cancel_view.html'">
+                    <div class="name">3月7日火曜日</div>
+                    <div class="list_box flex">
+                        <div class="l flex">
+                            <div class="img_icon"><img src="../image/sub/list_icon.svg" alt=""></div>
+                            <div class="p_alt_box">
+                                <div class="t">1112-****-****-5424</div>
+                                <div class="b flex">
+                                    <div class="date">23.03.07 12:06</div>
+                                    <div>一時払い.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r">
+                            <div class="gray">¥ 16,000</div>
+                            <div class="red">取り消し完了</div>
+                        </div>
+                    </div>
+                    <div class="list_box flex">
+                        <div class="l flex">
+                            <div class="img_icon"><img src="../image/sub/list_icon.svg" alt=""></div>
+                            <div class="p_alt_box">
+                                <div class="t">1112-****-****-5424</div>
+                                <div class="b flex">
+                                    <div class="date">23.03.07 12:06</div>
+                                    <div>一時払い.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r">
+                            <div class="gray">¥ 16,000</div>
+                            <div class="red">取り消し完了</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="point_list_box">
+                    <div class="name">3月8日火曜日</div>
+                    <div class="list_box flex">
+                        <div class="l flex">
+                            <div class="img_icon"><img src="../image/sub/list_icon.svg" alt=""></div>
+                            <div class="p_alt_box">
+                                <div class="t">1112-****-****-5424</div>
+                                <div class="b flex">
+                                    <div class="date">23.03.07 12:06</div>
+                                    <div>一時払い.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r">
+                            <div class="gray">¥ 16,000</div>
+                            <div class="red">取り消し完了</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Container-->
+
+    <!-- search_modal -->
+    <div class="date_search_modal">
+        <div class="modal_bg"></div>
+        <div class="modal">
+            <div class="modal_head flex_s">
+                <div class="name">照会期間</div>
+                <div class="modal_close_btn">
+                    <div class="img_icon"><img src="../image/sub/modal_close.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="modal_body">
+                <div class="modal_select_box">
+                    <div class="modal_style_box flex_c">
+                        <select name="" id="">
+                            <option value="">一か月</option>
+                        </select>
+                    </div>
+
+                    <div class="modal_style_box flex_c">
+                        <select name="" id="">
+                            <option value="">2023年03月</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" class="common_ok_btn">朝会.</button>
+            </div>
+        </div>
+    </div>
+    <!-- END search_modal -->
+
+    <!-- search_modal -->
+    <div class="card_search_modal">
+        <div class="modal_bg"></div>
+        <div class="modal" >
+            <div class="modal_head flex_s">
+                <div class="name">照会期間</div>
+                <div class="modal_close_btn">
+                    <div class="img_icon"><img src="../image/sub/modal_close.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="modal_body">
+                <div class="common_style_box">
+                    <input type="text" class="" id="" placeholder="携帯電話番号">
+                </div>
+                <button type="button" class="common_ok_btn" >朝会.</button>
+            </div>
+        </div>
+    </div>
+    <!-- END search_modal -->
+
+</div>
+<!--END Wrap-->
+
+</body>
+
+</html>
+
+
+<script>
+    $(document).ready(function () {
+
+    });
+    // date_search_modal
+    function date_search_modal_Open() {
+        $('.date_search_modal .modal').slideDown();
+        $('.date_search_modal .modal_bg').fadeIn();
+        $('html, body').addClass('on');
+    }
+
+    function date_search_modal_Close() {
+        $('.date_search_modal .modal').slideUp();
+        $('.date_search_modal .modal_bg').fadeOut();
+        $('html, body').removeClass('on');
+    }
+    // END date_search_modal
+
+    // card_search_modal
+    function card_search_modal_Open() {
+        $('.card_search_modal .modal').slideDown();
+        $('.card_search_modal .modal_bg').fadeIn();
+        $('html, body').addClass('on');
+    }
+
+    function card_search_modal_Close() {
+        $('.card_search_modal .modal').slideUp();
+        $('.card_search_modal .modal_bg').fadeOut();
+        $('html, body').removeClass('on');
+    }
+    // END card_search_modal
+</script>

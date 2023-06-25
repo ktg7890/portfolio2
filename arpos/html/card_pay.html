@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+
+<!-- gnb -->
+<div class="gnb_wrap">
+    <div class="gnb_mask" onclick="$('.gnb_wrap').removeClass('on'); $('html,body').removeClass('on');"></div>
+    <div class="gnb_box">
+        <div class="top">
+            <div class="gnb_nav flex">
+                <div class="logo">
+                    <div class="img_icon"><img src="../image/common/splash.svg" alt=""></div>
+                </div>
+                <div class="right flex">
+                    <a href="../html/main.html" class="home flex_c">
+                        <div class="img_icon"><img src="../image/common/home.svg" alt=""></div>
+                    </a>
+                    <a href="javascript:;" class="gnb_close flex_c"
+                        onclick="$('.gnb_wrap').removeClass('on'); $('html,body').removeClass('on');">
+                        <div class="img_icon"><img src="../image/common/close.svg" alt=""></div>
+                    </a>
+                </div>
+            </div>
+            <div class="gnb_profile flex">
+                <div class="profile_img"><img src="../image/main/profile_img.png" alt=""></div>
+                <div class="profile_alt mt10">
+                    <div class="name">スターバックス</div>
+                    <button type="button" class="profile_modify flex_c">情報修正 <div class="img_icon"><img
+                                src="../image/common/modify.svg" alt=""></div></button>
+                </div>
+            </div>
+        </div>
+        <div class="btm">
+            <div class="gnb_menu">
+                <a href="javascript:;" class="flex_s">
+                    <div class="name">決済内訳/ 申し込み</div>
+                    <div class="img_icon"><img src="../image/common/gnb_arw.svg" alt=""></div>
+                </a>
+                <a href="javascript:;" class="flex_s">
+                    <div class="name">既存の使用カード決済</div>
+                    <div class="img_icon"><img src="../image/common/gnb_arw.svg" alt=""></div>
+                </a>
+                <a href="javascript:;" class="flex_s">
+                    <div class="name">加盟店情報設定</div>
+                    <div class="img_icon"><img src="../image/common/gnb_arw.svg" alt=""></div>
+                </a>
+                <a href="javascript:;" class="flex_s">
+                    <div class="name">公知事項,</div>
+                    <div class="img_icon"><img src="../image/common/gnb_arw.svg" alt=""></div>
+                </a>
+                <a href="javascript:;" class="flex_s">
+                    <div class="name">決済内訳/ 申し込み</div>
+                    <div class="img_icon"><img src="../image/common/gnb_arw.svg" alt=""></div>
+                </a>
+            </div>
+        </div>
+        <button type="button" class="gnb_version">アプリバージョン:2.00</button>
+    </div>
+</div>
+<!-- END gnb -->
+
+<!--Wrap-->
+<div id="wrap">
+    <!--Container-->
+    <div id="container" class="pin_code_bg bill_bg flex">
+        <!-- sub header -->
+        <div class="sub_header">
+            <div class="sub_header_inner flex ">
+                <div class="back_btn flex_c" onclick="history.back();">
+                    <div class="img_icon"><img src="../image/common/back_arw.svg" alt=""></div>
+                </div>
+                <div class="sub_name">
+                    既存カード決済
+                </div>
+                <div class="gnb_btn flex_c" onclick="$('.gnb_wrap').addClass('on'); $('html,body').addClass('on');">
+                    <div class="img_icon"><img src="../image/common/menu.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- END sub header -->
+
+        <div class="card_pay_wrap flex">
+            <div class="card_pay_tit">
+                カードがなくても使用内訳が <br />
+                あれば決済が可能です。
+            </div>
+            <div class="card_pay_sub_tit">
+                利用履歴がある場合は、既存のカード情報を呼び出します。
+            </div>
+
+            <div class="card_pay_box">
+                <div class="common_form_box">
+                    <div class="name">携帯電話,</div>
+                    <div class="flex card_pay_form">
+                        <div class="common_style_box ">
+                            <input type="text" class="" id="" value="" placeholder="携帯電話番号入力">
+                        </div>
+                        <button type="button" class="tell_btn">認証.</button>
+                    </div>
+                </div>
+
+                <div class="common_form_box">
+                    <div class="common_style_box ">
+                        <input type="text" class="" id="" value="" placeholder="認証番号">
+                        <button type="button" class="verify_btn">再転送</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="common_ok_btn" onclick="location.href='../html/card_pay_2.html'">朝会.</button>
+        </div>
+
+    </div>
+    <!--END Container-->
+
+</div>
+<!--END Wrap-->
+
+</body>
+
+</html>
+
+
+<script>
+    $(document).ready(function () {
+
+    });
+</script>

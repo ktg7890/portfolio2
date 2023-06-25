@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
+
+</head>
+
+<!-- gnb -->
+<div data-include-path="gnb.html"></div>  
+<!-- END gnb -->
+
+<!--Wrap-->
+<div id="wrap">
+    <!--Container-->
+    <div id="container" class="pin_code_bg bill_bg flex">
+        <!-- sub header -->
+        <div class="sub_header">
+            <div class="sub_header_inner flex no">
+                <div class="back_btn flex_c" onclick="history.back();">
+                    <div class="img_icon"><img src="../image/common/back_arw.svg" alt=""></div>
+                </div>
+                <div class="sub_name">
+                    加盟店情報設定
+                </div>
+                <div class="gnb_btn flex_c" onclick="$('.gnb_wrap').addClass('on'); $('html,body').addClass('on');">
+                    <div class="img_icon"><img src="../image/common/menu.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- END sub header -->        
+
+        <div class="modify_wrap">
+            <div class="top">
+                <div class="profile_img">
+                    <img id="preview" src="../image/main/profile_img.png" alt="">
+                    <button type="button" class="modify_btn">
+                        <input type="file" id="file">
+                        <label for="file"></label>
+                    </button>
+                </div> 
+                <div class="profile_info_box">
+                    <div class="profile_name">カフェ</div>
+                    <div class="profile_sub_name">スターバックス</div>
+                </div>
+                <div class="location_alt_box flex">
+                    <div class="img_icon"><img src="..//image/main/location.svg" alt=""></div>
+                    <div class="alt">5263-78 Naganohara, Agatsuma District, 5Gunma 377-1304 日本</div>
+                </div>
+            </div>
+            <div class="modify_btm">
+                <div class="common_form_box">
+                    <div class="name">MID</div>
+                    <div class="common_style_box readonly">
+                        <input type="text" class="" id="" value="D545D" readonly>
+                    </div>
+                </div>
+
+                <div class="common_form_box">
+                    <div class="name">事業者番号</div>
+                    <div class="common_style_box readonly">
+                        <input type="text" class="" id="" value="1254-9856-94" readonly>
+                    </div>
+                </div>
+
+                <div class="common_form_box">
+                    <div class="name">代表番号</div>
+                    <div class="common_style_box">
+                        <input type="text" class="" id="" value="1254-9856-94" >
+                    </div>
+                </div>
+
+                <div class="common_form_box">
+                    <div class="name">FAX</div>
+                    <div class="common_style_box">
+                        <input type="text" class="" id="" value="1254-9856-94" >
+                    </div>
+                </div>
+                <button type="button" class="common_ok_btn" >修正する</button>
+            </div>
+        </div>
+       
+    </div>
+    <!--END Container--> 
+
+</div>
+<!--END Wrap-->
+
+</body>
+
+</html>
+
+
+<script>
+    $(document).ready(function () {
+        // 이미지 test
+        $('#file').change(function () {
+            setImageFromFile(this, '#preview');
+        });
+        // END 이미지 test
+    });    
+    // 프로필 사진 변경 test
+    function setImageFromFile(input, expression) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(expression).attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    // END프로필 사진 변경 test
+</script>

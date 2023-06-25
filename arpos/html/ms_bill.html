@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+
+<!--Wrap-->
+<div id="wrap">
+    <!--Container-->
+
+    <div class="ms_bill_wrap">
+        <div class="ms_bill_tit">クレジットカード領収書</div>
+        <div class="bill_alt_box">
+            <div class="tit">銀座芝漬</div>
+            <div class="profile_alt_box">
+                <div class="flex">
+                    <div class="left">住所</div>
+                    <div class="right">東京都中央区銀座8丁目12-5峯田ビルB1F</div>
+                </div>
+                <div class="flex">
+                    <div class="left">TEL</div>
+                    <div class="right">03-6278-0488</div>
+                </div>
+                <div class="flex">
+                    <div class="left">端末番号</div>
+                    <div class="right">4803</div>
+                </div>
+                <div class="flex_s last">
+                    <div class="right">2023-02-04 21:08:19</div>
+                    <div class="right">取引ID:557-0</div>
+                </div>
+            </div>
+
+            <div class="sub_box">
+                <div class="tit">領収金額</div>
+                <div class="won_box">
+                    <div class="won">¥ 74,800-</div>
+                    <div>
+                        （税￥6,800-) <br/>
+                        （10%対象￥74,800内消費税￥6,800)<br/>
+                        (クレジット¥74,800-内消費税¥6,800-)
+                    </div>
+                </div>
+                <div class="btm_tit">ただし）食べ物代で</div>
+            </div>
+            <div class="sign_img_box flex">
+                <div class="left">高サイン客</div>
+                <div class="right"><img class="mt10" src="../image/sub/sign_img.png" alt=""></div>
+            </div>
+            
+            <div class="center_tit">ご利用ありがとうございます。</div>
+        </div>
+        <div id="bcTarget"></div>
+    </div>
+
+</div>
+<!--END Container-->
+
+</div>
+<!--END Wrap-->
+
+</body>
+
+</html>
+<!-- 바코드 test -->
+<script type="text/javascript" src="../js/jquery-barcode.js"></script>
+<!-- END 바코드 test -->
+
+<script>
+    $(document).ready(function () {
+        // 바코드
+        $("#bcTarget").barcode("1234567890128", "ean13", {
+            barWidth: 2,
+            barHeight: 50
+        });
+        // END 바코드
+    });
+</script>

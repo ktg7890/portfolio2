@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
+
+</head>
+
+<body>
+    <div data-include-path="gnb.html"></div>       
+
+    <!--Wrap-->
+    <div id="wrap">
+        <!--Container-->
+        <div id="container" class="pin_code_bg card_bg flex">
+            
+            <div data-include-path="subheader.html" data-index="sub01"></div>
+
+            <div class="card_wrap">
+                <div class="card_img">
+                    <img src="../image/sub/card_01.png" alt="">
+                    <div class="card_num flex">
+                        <input type="text" value="2252" readonly>
+                        <input type="text" value="5565" readonly>
+                        <input type="text" value="2547" readonly>
+                        <input type="text" value="2547" readonly>
+                    </div>
+                    <div class="card_date">03/24</div>
+                    <div class="card_icon">
+                        <div class="img_icon"><img src="../image/sub/card_icon_01.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="common_form_box">
+                    <div class="name">CVC </div>
+                    <div class="common_style_box cvc">
+                        <input type="text" class="" id="" placeholder="CVC">
+                    </div>
+                </div>
+
+                <div class="common_form_box">
+                    <div class="name">携帯電話番号</div>
+                    <div class="common_style_box">
+                        <input type="text" class="" id="" placeholder="携帯電話番号">
+                    </div>
+                </div>
+
+                <div class="profile_alt_box two">
+                    <div class="flex_s">
+                        <div class="left">総額</div>
+                        <div class="right two">¥ 5,780</div>
+                    </div>
+                    <div class="flex img_box">
+                        <div class="img_icon"><img src="../image/sub/mc_img_01.png" alt=""></div>
+                        <div class="img_icon"><img src="../image/sub/mc_img_02.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="common_inner">
+                <button type="button" class="common_ok_btn" onclick="sign_modal_Open();">決済する</button>
+            </div>
+        </div>
+        <!--END Container-->
+
+        <!-- sign_modal -->
+        <div class="sign_modal">
+            <div class="modal_bg"></div>
+            <div class="modal">
+                <div class="modal_head flex_s">
+                    <div class="name">サイン</div>
+                    <div class="modal_close_btn">
+                        <div class="img_icon"><img src="../image/sub/modal_close.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="modal_body">
+                    <!-- 사인 전 -->
+                    <div class="sign_box">
+                        <div class="sign_before flex_c">
+                            <div class="img_icon"><img src="../image/sub/sign.svg" alt=""></div>
+                            <div class="txt">署名してください。</div>
+                        </div>
+                        <canvas id="signature"></canvas>
+                    </div>
+                    <!-- END 사인 전 -->
+                </div>
+                <button type="button" class="common_ok_btn" id="save">キャンセル</button>
+            </div>
+        </div>
+        <!-- END sign_modal -->
+
+        <!-- 싸인.js -->
+        <script type="text/javascript" src="../js/signature_pad.umd.js"></script>
+
+    </div>
+    <!--END Wrap-->
+
+</body>
+
+</html>
+
+
+<script>
+    var canvas = $('#signature')[0];
+    var signature = new SignaturePad(canvas);
+
+    $(document).ready(function () {
+        $('.sign_box').on("touchstart", function () {
+            $('.sign_before').css('display', 'none');
+        });
+
+        $("#save").on("click", function () {
+            if (signature.isEmpty()) {
+                alert('내용 없다');
+            } else {
+                const dataURL = signature.toDataURL();
+                download(dataURL, "signature.png");
+            }
+        });
+        // END 싸인
+    });
+
+    // sign_modal
+    function sign_modal_Open() {
+        $('.sign_modal .modal').slideDown();
+        $('.sign_modal .modal_bg').fadeIn();
+        $('html, body').addClass('on');
+        resizeCanvas();
+    }
+
+    function sign_modal_Close() {
+        $('.sign_modal .modal').slideUp();
+        $('.sign_modal .modal_bg').fadeOut();
+        $('html, body').removeClass('on');
+    }
+    // END sign_modal
+
+    function download(dataURL, filename) {
+        const blob = dataURLToBlob(dataURL);
+        const url = window.URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.style = "display: none";
+        a.href = url;
+        a.download = filename;
+
+        document.body.appendChild(a);
+        a.click();
+
+        window.URL.revokeObjectURL(url);
+    }
+
+    function dataURLToBlob(dataURL) {
+        const parts = dataURL.split(';base64,');
+        const contentType = parts[0].split(":")[1];
+        const raw = window.atob(parts[1]);
+        const rawLength = raw.length;
+        const uInt8Array = new Uint8Array(rawLength);
+
+        for (let i = 0; i < rawLength; ++i) {
+            uInt8Array[i] = raw.charCodeAt(i);
+        }
+
+        return new Blob([uInt8Array], {
+            type: contentType
+        });
+    }
+
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signature.clear();
+        $('.sign_before').css('display', 'flex');
+    }
+</script>

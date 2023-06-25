@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <title>arpos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Author" content="arpos">
+
+    <meta name="description" content="arpos">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:description" content="arpos">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" content="웹사이트url">
+	<meta name="url" content="웹사이트url"> 
+	<link rel="canonical" href="웹사이트url" /> -->
+    <meta name="robots" content="noindex"><!-- 오픈 전 삭제 부탁합니다!!! : 검색엔진로봇 수집을 막음 -->
+
+    <link rel="preload" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/layout.css" />
+    <link rel="preload" as="style" href="../css/common.css" />
+    <link rel="preload" as="style" href="../css/main.css" />
+    <link rel="preload" as="style" href="../css/sub.css" />
+
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../css/sub.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
+
+</head>
+
+<!-- gnb -->
+<div data-include-path="gnb.html"></div>
+<!-- END gnb -->
+
+<!--Wrap-->
+<div id="wrap">
+    <!--Container-->
+    <div id="container" class="pin_code_bg bill_bg flex">
+        <!-- sub header -->
+        <div class="sub_header">
+            <div class="sub_header_inner flex no">
+                <div class="back_btn flex_c" onclick="history.back();">
+                    <div class="img_icon"><img src="../image/common/back_arw.svg" alt=""></div>
+                </div>
+                <div class="sub_name">
+                    内訳詳細
+                </div>
+                <div class="gnb_btn flex_c" onclick="$('.gnb_wrap').addClass('on'); $('html,body').addClass('on');">
+                    <div class="img_icon"><img src="../image/common/menu.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- END sub header -->
+
+        <div class="point_view_wrap flex">
+            <div class="profile_alt_box two">
+                <div class="flex_s">
+                    <div class="left">総額</div>
+                    <div class="right two">¥ 5,780</div>
+                </div>
+            </div>
+
+            <div class="alt_view_box">
+                <div class="profile_alt_box">
+                    <div class="flex_s">       
+                        <div class="left">Card</div>
+                        <div class="right">4242-****-****-5658</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">決済方法</div>
+                        <div class="right">一時払い.</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Date</div>
+                        <div class="right">12/11/2023  19:06:02</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Time</div>
+                        <div class="right">8:00 am</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Subtotal</div>
+                        <div class="right">¥ 13,565</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">Tip(10%)</div>
+                        <div class="right">¥ 5,780</div>
+                    </div>
+                    <div class="flex_s">
+                        <div class="left">利用者向け電話</div>
+                        <div class="right">010-2058-4516</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sign_img_box flex">
+                <div class="left">高サイン客</div>
+                <div class="right"><img class="mt10" src="../image/sub/sign_img.png" alt=""></div>
+            </div>
+            <div class="view_btn_box flex">
+                <button type="button" class="view_btn" onclick="cancel_pop_Open();">キャンセルする</button>
+            </div>
+        </div>
+    </div>
+    <!--END Container-->
+
+    <div class="cancel_pop">
+        <div class="modal_bg"></div>
+        <div class="pop" >
+            <div class="pop_body">
+                <div class="pop_img img_icon"><img src="../image/sub/pop_cancel.png" alt=""></div>
+                <div class="pop_tit red">決済キャンセル</div>
+                <div class="pop_sub_tit">該当の件のカード決済をキャンセルしますか？</div>
+                <div class="pop_sub_tit two">該当の件のカード決済をキャンセルしますか？</div>
+                <div class="profile_alt_box two">
+                    <div class="flex_s">
+                        <div class="left">決済金額</div>
+                        <div class="right two">¥ 54,922</div>
+                    </div>
+                </div>                
+            </div>    
+            <button type="button" class="pop_btn" onclick="cancel_pop_Close();">確認.</button>        
+        </div>
+    </div>
+
+</div>
+<!--END Wrap-->
+
+</body>
+
+</html>
+
+
+<script>
+    $(document).ready(function () {
+
+    });
+    // cancel_pop
+    function cancel_pop_Open() {
+        $('.cancel_pop .pop').fadeIn();
+        $('.cancel_pop .modal_bg').fadeIn();
+        $('html, body').addClass('on');        
+    }
+
+    function cancel_pop_Close() {
+        $('.cancel_pop .pop').fadeOut();
+        $('.cancel_pop .modal_bg').fadeOut();
+        $('html, body').removeClass('on');
+    }
+    // END cancel_pop
+</script>
